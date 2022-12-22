@@ -1,0 +1,99 @@
+node-vinyl-fs (3.0.3-5) unstable; urgency=medium
+
+  * Team upload
+  * Ignore one test incompatible with debci machines (Closes: #954509)
+
+ -- Xavier Guimard <yadd@debian.org>  Sun, 22 Mar 2020 10:21:28 +0100
+
+node-vinyl-fs (3.0.3-4) unstable; urgency=medium
+
+  * Team upload
+  * Back to unstable
+  * Bump debhelper compatibility level to 12
+  * Declare compliance with policy 4.4.1
+  * Add "Rules-Requires-Root: no"
+  * Add upstream/metadata
+  * Add missing component has-symbols
+  * Use pkg-js-tools auto install
+  * Fix homepage
+  * Add patch desc
+  * Add lintian overrides
+  * Embed some little modules for tests
+  * Update copyright
+  * Update lintian overrides
+  * Enable some upstream tests using mocha
+
+ -- Xavier Guimard <yadd@debian.org>  Fri, 13 Mar 2020 18:36:51 +0100
+
+node-vinyl-fs (3.0.3-3) experimental; urgency=medium
+
+  * Add object.assign module (with has-symbols, object-keys, define-properties)
+  * Add pkg-js-tools as build dependency
+  * Add runtime dependencies to build dependencies as well
+  * Add node-is-buffer, node-normalize-path and node-function-bind dependencies
+
+ -- Pirate Praveen <praveen@debian.org>  Fri, 31 May 2019 19:09:09 +0530
+
+node-vinyl-fs (3.0.3-2) experimental; urgency=medium
+
+  * Add node-convert-source-map as dependency for embedded vinyl-sourcemap
+  * Add Breaks for gulp << 4.0
+  * Add myself to uploaders
+  * Change section to javascript
+  * Bump Standards-Version to 4.3.0 (no changes needed)
+  * Add node-flush-write-stream as dependency
+  * Drop pkg-components and just use uscan
+
+ -- Pirate Praveen <praveen@debian.org>  Thu, 30 May 2019 22:27:09 +0530
+
+node-vinyl-fs (3.0.3-1) experimental; urgency=medium
+
+  * New upstream version 3.0.3
+  * Use salsa.debian.org in Vcs-* fields
+  * Bump debhelper compatibility level to 11
+  * Bump Standards-Version to 4.2.1 (no changes needed)
+  * Update dependencies
+  * Add new dependencies as components
+
+ -- Pirate Praveen <praveen@debian.org>  Wed, 31 Oct 2018 23:47:06 +0530
+
+node-vinyl-fs (2.4.4-3) unstable; urgency=medium
+
+  * Team upload
+
+  [ Pirate Praveen ]
+  * Tighten (build) dependencies on node-glob-stream and node-sinon
+
+  [ Xavier Guimard ]
+  * Update lintian override
+  * Update patch to fix test
+  * Declare compliance with policy 4.5.0
+
+ -- Xavier Guimard <yadd@debian.org>  Fri, 31 Jan 2020 07:18:30 +0100
+
+node-vinyl-fs (2.4.4-2) unstable; urgency=medium
+
+  * Team upload
+  * Add patch comment
+  * Add "Rules-Requires-Root: no"
+  * Change section to javascript
+  * Add debian/gbp.conf
+  * Add upstream/metadata
+  * Fix homepage
+  * Drop unneeded version constraints from (build) dependencies
+  * Embed outdated strip-bom-stream to fix debci. Will be removed with
+    vinyl-fs 3
+  * Add fix for recent node-sinon and node-glob-stream
+  * Enable upstream test:
+    + Embed some little modules for test only
+  * Use pkg-js-tools auto install
+  * Update copyright
+  * Add lintian overrides
+
+ -- Xavier Guimard <yadd@debian.org>  Sun, 29 Dec 2019 09:01:49 +0100
+
+node-vinyl-fs (2.4.4-1) unstable; urgency=low
+
+  * Initial release (Closes: #847678)
+
+ -- Sruthi Chandran <srud@disroot.org>  Sun, 11 Dec 2016 23:07:37 +0530

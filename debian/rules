@@ -1,0 +1,8 @@
+#!/usr/bin/make -f
+# -*- makefile -*-
+
+# Tell nodejs to look for embedded modules
+export NODE_PATH := ${CURDIR}
+
+%:
+	dh $@ --with nodejs

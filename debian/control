@@ -1,0 +1,82 @@
+Source: node-vinyl-fs
+Maintainer: Debian Javascript Maintainers <pkg-javascript-devel@lists.alioth.debian.org>
+Uploaders: Sruthi Chandran <srud@disroot.org>,
+           Pirate Praveen <praveen@debian.org>
+Section: javascript
+Testsuite: autopkgtest-pkg-nodejs
+Priority: optional
+Build-Depends:
+ debhelper-compat (= 12),
+ , mocha <!nocheck>
+ , node-debbundle-es-to-primitive <!nocheck>
+ , node-mississippi <!nocheck>
+ , node-object-inspect <!nocheck>
+ , node-rimraf <!nocheck>
+ , node-tmatch <!nocheck>
+ , pkg-js-tools (>= 0.9.23~),
+# fs-mkdirp-stream is embedded
+ , node-glob-stream (>= 6.1~),
+ , node-graceful-fs (>= 4.0~),
+ , node-is-valid-glob (>= 1.0~),
+ , node-lazystream,
+# lead is embedded
+# for lead
+ , node-flush-write-stream,
+ , node-object-assign,
+ , node-pumpify,
+# remove-bom-buffer, remove-bom-stream, resolve-options is embedded
+# for remove-bom-buffer
+ , node-is-buffer,
+ , node-through2 (>= 2.0~),
+# to-through, value-or-function is embedded
+ , node-vinyl,
+# vinyl-sourcemap is embedded
+# for vinyl-sourcemap
+ , node-convert-source-map (>= 1.5~),
+ , node-normalize-path,
+# object.assign is embedded
+# for object.assign
+ , node-function-bind
+Standards-Version: 4.5.0
+Vcs-Browser: https://salsa.debian.org/js-team/node-vinyl-fs
+Vcs-Git: https://salsa.debian.org/js-team/node-vinyl-fs.git
+Homepage: https://github.com/wearefractal/vinyl-fs
+Rules-Requires-Root: no
+
+Package: node-vinyl-fs
+Architecture: all
+Depends:
+ ${misc:Depends},
+ , nodejs,
+# fs-mkdirp-stream is embedded
+ , node-glob-stream (>= 6.1~),
+ , node-graceful-fs (>= 4.0~),
+ , node-is-valid-glob (>= 1.0~),
+ , node-lazystream,
+# lead is embedded
+# for lead
+ , node-flush-write-stream,
+ , node-object-assign,
+ , node-pumpify,
+# remove-bom-buffer, remove-bom-stream, resolve-options is embedded
+# for remove-bom-buffer
+ , node-is-buffer,
+ , node-through2 (>= 2.0~),
+# to-through, value-or-function is embedded
+ , node-vinyl,
+# vinyl-sourcemap is embedded
+# for vinyl-sourcemap
+ , node-convert-source-map (>= 1.5~),
+ , node-normalize-path,
+# object.assign is embedded
+# for object.assign
+ , node-function-bind
+Breaks: gulp (<< 4.0~)
+Description: Vinyl adapter for the file system
+ A Vinyl adapter simply exposes a `src(globs)` and a `dest(folder)` method.
+ Each return a stream. The `src` stream produces Vinyl objects, and the `dest`
+ stream consumes Vinyl objects. Vinyl adapters can expose extra methods that
+ might be specific to their input/output medium, such as the `symlink` method
+ `vinyl-fs` provides.
+ .
+ Node.js is an event-based server-side JavaScript engine.
