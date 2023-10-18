@@ -1,6 +1,14 @@
-# False positive
-source: source-is-missing object-assign/dist/browser.js line length is 480 characters (>256)
-source: source-contains-prebuilt-javascript-object object-assign/dist/browser.js line length is 480 characters (>256)
-source: source-is-missing debian/tests/test_modules/expect/lib/Expectation.js line length is 564 characters (>512)
-source: source-contains-prebuilt-javascript-object debian/tests/test_modules/expect/lib/Expectation.js line length is 564 characters (>512)
-source: very-long-line-length-in-source-file debian/tests/test_modules/expect/lib/Expectation.js line length is 564 characters (>512)
+# Generic types-* path
+add-component-copyright types-*
+# Same author
+add-component-copyright lead *
+add-component-copyright now-and-later *
+add-component-copyright remove-bom-stream *
+add-component-copyright resolve-options *
+add-component-copyright to-through *
+add-component-copyright value-or-function *
+# Data
+source-is-missing debian/tests/test_modules/expect/lib/Expectation.js
+source-contains-prebuilt-javascript-object debian/tests/test_modules/expect/lib/Expectation.js
+very-long-line-length-in-source-file *.md line *
+very-long-line-length-in-source-file debian/tests/test_modules/expect/lib/Expectation.js line 9 is 564 characters long (>512)

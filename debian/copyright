@@ -6,7 +6,6 @@ Source: https://github.com/wearefractal/vinyl-fs
  https://registry.npmjs.org/fs-mkdirp-stream
  https://registry.npmjs.org/remove-bom-buffer
  https://registry.npmjs.org/value-or-function
- https://registry.npmjs.org/buffer-equal
  https://registry.npmjs.org/remove-bom-stream
  https://registry.npmjs.org/vinyl-sourcemap
  https://registry.npmjs.org/is-utf8
@@ -15,9 +14,7 @@ Source: https://github.com/wearefractal/vinyl-fs
  https://registry.npmjs.org/now-and-later
  https://registry.npmjs.org/to-through
  https://registry.npmjs.org/object.assign
- https://registry.npmjs.org/define-properties
- https://registry.npmjs.org/object-keys
- https://github.com/ljharb/has-symbols/tags
+ https://registry.npmjs.org/@types/vinyl-fs
 
 Files: *
 Copyright: 2013-2017, Blaine Bublitz <blaine.bublitz@gmail.com>
@@ -28,16 +25,26 @@ Files: append-buffer/*
 Copyright: 2017, Brian Woodward
 License: Expat
 
-Files: buffer-equal/*
-Copyright: James Halliday <mail@substack.net>
+Files: debian/*
+Copyright: 2016, Sruthi Chandran <srud@disroot.org>
+ 2020-2022, Yadd <yadd@debian.org>
 License: Expat
 
-Files: define-properties/*
- has-symbols/*
- object-assign/*
- object-keys/*
-Copyright: 2015, Jordan Harband
+Files: debian/tests/test_modules/*
+Copyright: 2013-2018 Jordan Harband
 License: Expat
+
+Files: debian/tests/test_modules/expect/*
+Copyright: 2015 Michael Jackson
+License: Expat
+
+Files: fs-mkdirp-stream/*
+Copyright: 2017 Blaine Bublitz <blaine.bublitz@gmail.com>
+ 2017 Eric Schoffstall <yo@contra.io>
+License: Expat
+Comment: Originally based on code from node-mkdirp
+ Copyright: 2010 James Halliday
+ License: Expat
 
 Files: is-utf8/*
 Copyright: 2014, Wei Fanzhe
@@ -47,26 +54,17 @@ Files: remove-bom-buffer/*
 Copyright: 2015-2017, Jon Schlinkert
 License: Expat
 
-Files: debian/*
-Copyright: 2016, Sruthi Chandran <srud@disroot.org>
- 2020, Xavier Guimard <yadd@debian.org>
+Files: types-*/*
+Copyright: Microsoft Corporation
 License: Expat
 
-Files: debian/tests/test_modules/*
-Copyright: 2013-2018 Jordan Harband
+Files: vinyl-sourcemap/*
+Copyright: 2017 Blaine Bublitz <blaine.bublitz@gmail.com>
+ 2017 Eric Schoffstall <yocontra.io>
 License: Expat
-
-Files:
- debian/tests/test_modules/is-map/*
- debian/tests/test_modules/is-set/*
- debian/tests/test_modules/is-weak*/*
- debian/tests/test_modules/which-collection/*
-Copyright: 2019 Inspect JS
-License: Expat
-
-Files: debian/tests/test_modules/expect/*
-Copyright: 2015 Michael Jackson
-License: Expat
+Comment: Based on code from gulp-sourcemaps
+ Copyright: 2014, Florian Reiterer
+ License: ISC
 
 License: Expat
  Permission is hereby granted, free of charge, to any person
