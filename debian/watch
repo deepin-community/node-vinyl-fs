@@ -1,72 +1,54 @@
-version=3
+version=4
 opts=\
-dversionmangle=s/\+(debian|dfsg|ds|deb)(\.\d+)?$//,\
-filenamemangle=s/.*\/v?([\d\.-]+)\.tar\.gz/node-vinyl-fs-$1.tar.gz/ \
- https://github.com/wearefractal/vinyl-fs/tags .*/archive/v?([\d\.]+).tar.gz debian
-
-opts="searchmode=plain,pgpmode=none,component=append-buffer" \
-https://registry.npmjs.org/append-buffer \
-https://registry.npmjs.org/append-buffer/-/append-buffer-(1.[\d\.]*)@ARCHIVE_EXT@ ignore
-
-opts="searchmode=plain,pgpmode=none,component=fs-mkdirp-stream" \
-https://registry.npmjs.org/fs-mkdirp-stream \
-https://registry.npmjs.org/fs-mkdirp-stream/-/fs-mkdirp-stream-(1.[\d\.]*)@ARCHIVE_EXT@ ignore
-
-opts="searchmode=plain,pgpmode=none,component=remove-bom-buffer" \
-https://registry.npmjs.org/remove-bom-buffer \
-https://registry.npmjs.org/remove-bom-buffer/-/remove-bom-buffer-(3.[\d\.]*)@ARCHIVE_EXT@ ignore
-
-opts="searchmode=plain,pgpmode=none,component=value-or-function" \
-https://registry.npmjs.org/value-or-function \
-https://registry.npmjs.org/value-or-function/-/value-or-function-(3.[\d\.]*)@ARCHIVE_EXT@ ignore
-
-opts="searchmode=plain,pgpmode=none,component=buffer-equal" \
-https://registry.npmjs.org/buffer-equal \
-https://registry.npmjs.org/buffer-equal/-/buffer-equal-(1.[\d\.]*)@ARCHIVE_EXT@ ignore
-
-opts="searchmode=plain,pgpmode=none,component=remove-bom-stream" \
-https://registry.npmjs.org/remove-bom-stream \
-https://registry.npmjs.org/remove-bom-stream/-/remove-bom-stream-(1.[\d\.]*)@ARCHIVE_EXT@ ignore
-
-opts="searchmode=plain,pgpmode=none,component=vinyl-sourcemap" \
-https://registry.npmjs.org/vinyl-sourcemap \
-https://registry.npmjs.org/vinyl-sourcemap/-/vinyl-sourcemap-(1.[\d\.]*)@ARCHIVE_EXT@ ignore
-
-opts="searchmode=plain,pgpmode=none,component=is-utf8" \
-https://registry.npmjs.org/is-utf8 \
-https://registry.npmjs.org/is-utf8/-/is-utf8-(0.[\d\.]*)@ARCHIVE_EXT@ ignore
-
-opts="searchmode=plain,pgpmode=none,component=resolve-options" \
-https://registry.npmjs.org/resolve-options \
-https://registry.npmjs.org/resolve-options/-/resolve-options-(1.[\d\.]*)@ARCHIVE_EXT@ ignore
-
-opts="searchmode=plain,pgpmode=none,component=lead" \
-https://registry.npmjs.org/lead \
-https://registry.npmjs.org/lead/-/lead-(1.[\d\.]*)@ARCHIVE_EXT@ ignore
-
-opts="searchmode=plain,pgpmode=none,component=now-and-later" \
-https://registry.npmjs.org/now-and-later \
-https://registry.npmjs.org/now-and-later/-/now-and-later-(2.[\d\.]*)@ARCHIVE_EXT@ ignore
-
-opts="searchmode=plain,pgpmode=none,component=to-through" \
-https://registry.npmjs.org/to-through \
-https://registry.npmjs.org/to-through/-/to-through-(2.[\d\.]*)@ARCHIVE_EXT@ ignore
-
-# dpkg-source does not recognize . in component name so object.assign changed to object-assign
-opts="searchmode=plain,pgpmode=none,component=object-assign" \
- https://registry.npmjs.org/object.assign \
- https://registry.npmjs.org/object.assign/-/object.assign-(4.[\d\.]*)@ARCHIVE_EXT@ ignore
-
-opts="searchmode=plain,pgpmode=none,component=define-properties" \
-https://registry.npmjs.org/define-properties \
-https://registry.npmjs.org/define-properties/-/define-properties-(1.[\d\.]*)@ARCHIVE_EXT@ ignore
-
-opts="searchmode=plain,pgpmode=none,component=object-keys" \
-https://registry.npmjs.org/object-keys \
-https://registry.npmjs.org/object-keys/-/object-keys-(1.[\d\.]*)@ARCHIVE_EXT@ ignore
-
-opts=\
-component=has-symbols,\
 dversionmangle=auto,\
-filenamemangle=s/.*\/v?([\d\.-]+)\.tar\.gz/node-has-symbols-$1.tar.gz/ \
- https://github.com/ljharb/has-symbols/tags .*/archive/v?([\d\.]+).tar.gz ignore
+filenamemangle=s/.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-vinyl-fs-$1/ \
+ https://github.com/wearefractal/vinyl-fs/tags .*/archive/.*/v?([\d\.]+).tar.gz group
+
+opts="searchmode=plain,pgpmode=none,ctype=nodejs,component=append-buffer" \
+https://registry.npmjs.org/append-buffer \
+https://registry.npmjs.org/append-buffer/-/append-buffer-(1.[\d\.]*)@ARCHIVE_EXT@ checksum
+
+opts="searchmode=plain,pgpmode=none,ctype=nodejs,component=fs-mkdirp-stream" \
+https://registry.npmjs.org/fs-mkdirp-stream \
+https://registry.npmjs.org/fs-mkdirp-stream/-/fs-mkdirp-stream-(1.[\d\.]*)@ARCHIVE_EXT@ checksum
+
+opts="searchmode=plain,pgpmode=none,ctype=nodejs,component=remove-bom-buffer" \
+https://registry.npmjs.org/remove-bom-buffer \
+https://registry.npmjs.org/remove-bom-buffer/-/remove-bom-buffer-(3.[\d\.]*)@ARCHIVE_EXT@ checksum
+
+opts="searchmode=plain,pgpmode=none,ctype=nodejs,component=value-or-function" \
+https://registry.npmjs.org/value-or-function \
+https://registry.npmjs.org/value-or-function/-/value-or-function-(3.[\d\.]*)@ARCHIVE_EXT@ checksum
+
+opts="searchmode=plain,pgpmode=none,ctype=nodejs,component=remove-bom-stream" \
+https://registry.npmjs.org/remove-bom-stream \
+https://registry.npmjs.org/remove-bom-stream/-/remove-bom-stream-(1.[\d\.]*)@ARCHIVE_EXT@ checksum
+
+opts="searchmode=plain,pgpmode=none,ctype=nodejs,component=vinyl-sourcemap" \
+https://registry.npmjs.org/vinyl-sourcemap \
+https://registry.npmjs.org/vinyl-sourcemap/-/vinyl-sourcemap-(1.[\d\.]*)@ARCHIVE_EXT@ checksum
+
+opts="searchmode=plain,pgpmode=none,ctype=nodejs,component=is-utf8" \
+https://registry.npmjs.org/is-utf8 \
+https://registry.npmjs.org/is-utf8/-/is-utf8-(0.[\d\.]*)@ARCHIVE_EXT@ checksum
+
+opts="searchmode=plain,pgpmode=none,ctype=nodejs,component=resolve-options" \
+https://registry.npmjs.org/resolve-options \
+https://registry.npmjs.org/resolve-options/-/resolve-options-(1.[\d\.]*)@ARCHIVE_EXT@ checksum
+
+opts="searchmode=plain,pgpmode=none,ctype=nodejs,component=lead" \
+https://registry.npmjs.org/lead \
+https://registry.npmjs.org/lead/-/lead-(1.[\d\.]*)@ARCHIVE_EXT@ checksum
+
+opts="searchmode=plain,pgpmode=none,ctype=nodejs,component=now-and-later" \
+https://registry.npmjs.org/now-and-later \
+https://registry.npmjs.org/now-and-later/-/now-and-later-(2.[\d\.]*)@ARCHIVE_EXT@ checksum
+
+opts="searchmode=plain,pgpmode=none,ctype=nodejs,component=to-through" \
+https://registry.npmjs.org/to-through \
+https://registry.npmjs.org/to-through/-/to-through-(2.[\d\.]*)@ARCHIVE_EXT@ checksum
+
+# It is not recommended use npmregistry. Please investigate more.
+# Take a look at https://wiki.debian.org/debian/watch/
+opts="searchmode=plain,component=types-vinyl-fs,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-vinyl-fs-$1/" \
+ https://registry.npmjs.org/@types/vinyl-fs https://registry.npmjs.org/@types/vinyl-fs/-/vinyl-fs-([\d\.]+)@ARCHIVE_EXT@ checksum
